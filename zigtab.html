@@ -416,7 +416,7 @@
 
     .eventos-grid {
       display: grid;
-      grid-template-columns: repeat(3,1fr);
+      grid-template-columns: repeat(2,1fr);
       border-left: var(--rule);
     }
 
@@ -975,7 +975,7 @@
        RESPONSIVE
     ═══════════════════════════════════════ */
     @media (max-width: 1100px) {
-      .eventos-grid { grid-template-columns: 1fr; border-left: none; }
+      .eventos-grid { grid-template-columns: 1fr 1fr; border-left: none; }
       .ev-card { border-left: var(--rule); border-right: none; min-height: auto; }
       .artists-grid { grid-template-columns: repeat(3,1fr); }
       .artist-card:nth-child(n+7) { border-bottom: var(--rule); }
@@ -1181,94 +1181,64 @@
 
   <div class="eventos-grid" role="list">
 
-    <!-- SECRET VIBES — featured -->
-    <article class="ev-card featured reveal" role="listitem" tabindex="0" aria-label="Evento: Secret Vibes">
+    <!-- SECRET VIBES III — featured -->
+    <article class="ev-card featured reveal" role="listitem" tabindex="0" aria-label="Evento: Secret Vibes III">
       <div class="ev-badge live">Em Breve</div>
 
       <div class="ev-vis" aria-hidden="true">
         <svg viewBox="0 0 240 120">
-          <!-- Keyhole / secret icon -->
-          <circle cx="120" cy="52" r="30"/>
-          <path d="M 102 68 L 96 100 L 144 100 L 138 68"/>
-          <!-- Small stars -->
-          <circle cx="40" cy="30" r="2.5" class="f" style="opacity:.4"/>
-          <circle cx="200" cy="20" r="2" class="f" style="opacity:.3"/>
-          <circle cx="55" cy="80" r="1.5" class="f" style="opacity:.25"/>
-          <circle cx="190" cy="70" r="2.5" class="f" style="opacity:.35"/>
-          <circle cx="175" cy="95" r="1.5" class="f" style="opacity:.2"/>
+          <circle cx="120" cy="48" r="30"/>
+          <path d="M 102 64 L 96 96 L 144 96 L 138 64"/>
+          <circle cx="40" cy="28" r="2.5" class="f" style="opacity:.4"/>
+          <circle cx="200" cy="18" r="2" class="f" style="opacity:.3"/>
+          <circle cx="55" cy="78" r="1.5" class="f" style="opacity:.25"/>
+          <circle cx="192" cy="68" r="2.5" class="f" style="opacity:.35"/>
+          <line x1="108" y1="105" x2="108" y2="116"/>
+          <line x1="120" y1="105" x2="120" y2="116"/>
+          <line x1="132" y1="105" x2="132" y2="116"/>
         </svg>
       </div>
 
       <div class="ev-meta">
-        <h3 class="ev-name">SECRET<br>VIBES</h3>
+        <h3 class="ev-name">SECRET<br>VIBES III</h3>
         <div class="ev-info">
-          <div class="ev-info-row">A Confirmar · 2025</div>
+          <div class="ev-info-row">Em breve · 2025</div>
           <div class="ev-info-row">Oásis Camping Club</div>
           <div class="ev-info-row">Ingresso Nominal</div>
         </div>
       </div>
-      <button class="ev-btn" aria-label="Comprar ingresso para Secret Vibes">
-        <span>Garantir Ingresso →</span>
+      <button class="ev-btn" aria-label="Ser notificado sobre Secret Vibes III">
+        <span>Notificar-me →</span>
       </button>
     </article>
 
-    <!-- ZIGTAB RELOAD -->
-    <article class="ev-card reveal" role="listitem" tabindex="0" aria-label="Evento: ZigTab Reload" style="transition-delay:.1s">
+    <!-- ROOM ON FIRE -->
+    <article class="ev-card reveal" role="listitem" tabindex="0" aria-label="Evento: Room on Fire" style="transition-delay:.1s">
       <div class="ev-badge">Em Breve</div>
 
       <div class="ev-vis" aria-hidden="true">
         <svg viewBox="0 0 240 120">
-          <!-- Reload / circular arrow -->
-          <path d="M 120 30 A 42 42 0 1 1 78 72"/>
-          <polyline points="68,58 78,72 92,62"/>
-          <!-- Frequency bars -->
-          <rect x="30" y="85" width="7" height="22" class="f" style="opacity:.15"/>
-          <rect x="42" y="76" width="7" height="31" class="f" style="opacity:.2"/>
-          <rect x="54" y="82" width="7" height="25" class="f" style="opacity:.15"/>
-          <rect x="174" y="78" width="7" height="29" class="f" style="opacity:.2"/>
-          <rect x="186" y="85" width="7" height="22" class="f" style="opacity:.15"/>
-          <rect x="198" y="72" width="7" height="35" class="f" style="opacity:.22"/>
+          <circle cx="120" cy="60" r="28"/>
+          <circle cx="120" cy="60" r="10" class="f" style="opacity:.2"/>
+          <circle cx="120" cy="60" r="5" class="f"/>
+          <line x1="30" y1="60" x2="58" y2="60" style="opacity:.3"/>
+          <line x1="40" y1="46" x2="40" y2="74" style="opacity:.3"/>
+          <line x1="50" y1="52" x2="50" y2="68" style="opacity:.2"/>
+          <line x1="182" y1="60" x2="210" y2="60" style="opacity:.3"/>
+          <line x1="200" y1="46" x2="200" y2="74" style="opacity:.3"/>
+          <line x1="190" y1="52" x2="190" y2="68" style="opacity:.2"/>
+          <circle cx="75" cy="22" r="2" class="f" style="opacity:.35"/>
+          <circle cx="165" cy="18" r="1.5" class="f" style="opacity:.3"/>
+          <circle cx="88" cy="105" r="2" class="f" style="opacity:.2"/>
         </svg>
       </div>
 
       <div class="ev-meta">
-        <h3 class="ev-name">ZIGTAB<br>RELOAD</h3>
+        <h3 class="ev-name">ROOM<br>ON FIRE</h3>
         <div class="ev-info">
-          <div class="ev-info-row">A Confirmar · 2025</div>
-          <div class="ev-info-row">Oásis Camping Club</div>
-          <div class="ev-info-row">Ingresso Nominal</div>
-        </div>
-      </div>
-      <button class="ev-btn">
-        <span>Lista de Espera →</span>
-      </button>
-    </article>
-
-    <!-- UNDER THE CHRISTMAS TREE -->
-    <article class="ev-card reveal" role="listitem" tabindex="0" aria-label="Evento: Under The Christmas Tree" style="transition-delay:.2s">
-      <div class="ev-badge">Dezembro 2025</div>
-
-      <div class="ev-vis" aria-hidden="true">
-        <svg viewBox="0 0 240 120">
-          <!-- Stylized tree (triangles strunken) -->
-          <polygon points="120,15 155,55 85,55"/>
-          <polygon points="120,38 162,82 78,82"/>
-          <polygon points="120,60 168,108 72,108"/>
-          <rect x="110" y="108" width="20" height="12" class="f" style="opacity:.15"/>
-          <!-- Ornaments -->
-          <circle cx="95" cy="48" r="3.5" class="f" style="opacity:.3"/>
-          <circle cx="148" cy="62" r="3" class="f" style="opacity:.25"/>
-          <circle cx="86" cy="90" r="3" class="f" style="opacity:.28"/>
-          <circle cx="160" cy="88" r="3.5" class="f" style="opacity:.22"/>
-        </svg>
-      </div>
-
-      <div class="ev-meta">
-        <h3 class="ev-name">UNDER<br>THE TREE</h3>
-        <div class="ev-info">
-          <div class="ev-info-row">Dezembro · 2025</div>
-          <div class="ev-info-row">Oásis Camping Club</div>
-          <div class="ev-info-row">Ingresso Nominal</div>
+          <div class="ev-info-row">Gravação de Set ao Vivo</div>
+          <div class="ev-info-row">Em breve · 2025</div>
+          <div class="ev-info-row">Local a Confirmar</div>
         </div>
       </div>
       <button class="ev-btn">
