@@ -619,7 +619,7 @@
       transition: background .25s, color .25s;
       cursor: pointer;
     }
-    .artist-card:nth-child(n+7) { border-bottom: none; }
+    .artist-card:nth-child(n+13) { border-bottom: none; }
     .artist-card:hover { background: var(--violet); color: var(--w); }
     .artist-card.tba { opacity: .22; cursor: default; }
     .artist-card.tba:hover { background: var(--k); color: var(--w); }
@@ -1324,42 +1324,77 @@
 
   <div class="artists-grid" role="list">
 
-    <!-- MOCHAKK -->
-    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="Mochakk DJ — tocou na ZIGTAB edição 1">
+    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="Mochakk DJ — ZIGTAB">
       <div class="artist-avatar" aria-hidden="true">
         <svg viewBox="0 0 60 60">
           <circle cx="30" cy="30" r="20"/>
           <circle cx="30" cy="30" r="8"/>
           <circle cx="30" cy="30" r="2" class="f"/>
-          <line x1="5" y1="30" x2="10" y2="30" style="opacity:.4"/>
-          <line x1="50" y1="30" x2="55" y2="30" style="opacity:.4"/>
         </svg>
       </div>
       <div>
-        <p class="artist-tag" style="opacity:.5;margin-bottom:.25rem">PLAYER 1</p>
         <h3 class="artist-name">MOCHAKK</h3>
-        <p class="artist-tag">DJ · Producer · São Paulo</p>
+        <p class="artist-tag">ZIGTAB I</p>
       </div>
     </article>
 
-    <!-- PUKKA DJ -->
-    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="Pukka DJ — tocou no After DeepSoul by ZIGTAB" style="transition-delay:.08s">
+    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="OZ DJ — ZIGTAB" style="transition-delay:.06s">
       <div class="artist-avatar" aria-hidden="true">
         <svg viewBox="0 0 60 60">
-          <path d="M 10 42 Q 20 10 30 18 Q 40 26 50 8"/>
+          <circle cx="30" cy="30" r="18"/>
           <circle cx="30" cy="30" r="6" class="f" style="opacity:.3"/>
-          <line x1="30" y1="36" x2="30" y2="52" style="opacity:.3"/>
+          <line x1="30" y1="8" x2="30" y2="12" style="opacity:.5"/>
+          <line x1="30" y1="48" x2="30" y2="52" style="opacity:.5"/>
         </svg>
       </div>
       <div>
-        <p class="artist-tag" style="opacity:.5;margin-bottom:.25rem">PLAYER 2</p>
-        <h3 class="artist-name">PUKKA DJ</h3>
-        <p class="artist-tag">DJ · Deep House</p>
+        <h3 class="artist-name">OZ</h3>
+        <p class="artist-tag">ZIGTAB I</p>
       </div>
     </article>
 
-    <!-- VISAGE -->
-    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="Visage DJ — residente ZIGTAB Porto Velho" style="transition-delay:.16s">
+    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="Rodd DJ — ZIGTAB I, II e Reload" style="transition-delay:.12s">
+      <div class="artist-avatar" aria-hidden="true">
+        <svg viewBox="0 0 60 60">
+          <path d="M 10 50 L 10 20 Q 10 8 22 8 Q 34 8 34 20 Q 34 30 22 32 L 38 50"/>
+          <circle cx="22" cy="20" r="2" class="f" style="opacity:.4"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="artist-name">RODD</h3>
+        <p class="artist-tag">ZIGTAB I · II · RELOAD</p>
+      </div>
+    </article>
+
+    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="Cour.T DJ — ZIGTAB II" style="transition-delay:.18s">
+      <div class="artist-avatar" aria-hidden="true">
+        <svg viewBox="0 0 60 60">
+          <line x1="30" y1="8" x2="30" y2="52"/>
+          <line x1="10" y1="18" x2="50" y2="18"/>
+          <circle cx="14" cy="32" r="8"/>
+          <circle cx="46" cy="28" r="8"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="artist-name">COUR.T</h3>
+        <p class="artist-tag">ZIGTAB II</p>
+      </div>
+    </article>
+
+    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="Slowmotion DJ — ZIGTAB II" style="transition-delay:.24s">
+      <div class="artist-avatar" aria-hidden="true">
+        <svg viewBox="0 0 60 60">
+          <path d="M 5 30 Q 15 15, 25 30 Q 35 45, 45 30 Q 52 18, 58 30"/>
+          <circle cx="30" cy="30" r="4" class="f"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="artist-name">SLOW<br>MOTION</h3>
+        <p class="artist-tag">ZIGTAB II</p>
+      </div>
+    </article>
+
+    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="Visage DJ — ZIGTAB II" style="transition-delay:.30s">
       <div class="artist-avatar" aria-hidden="true">
         <svg viewBox="0 0 60 60">
           <circle cx="30" cy="22" r="12"/>
@@ -1369,59 +1404,135 @@
         </svg>
       </div>
       <div>
-        <p class="artist-tag" style="opacity:.5;margin-bottom:.25rem">RESIDENTE</p>
         <h3 class="artist-name">VISAGE</h3>
-        <p class="artist-tag">DJ · Porto Velho, RO</p>
+        <p class="artist-tag">ZIGTAB II</p>
       </div>
     </article>
 
-    <!-- SLOWMOTION -->
-    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="SlowMotion DJ — residente ZIGTAB Porto Velho" style="transition-delay:.24s">
+    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="Mizura DJ — ZIGTAB II e Reload" style="transition-delay:.36s">
       <div class="artist-avatar" aria-hidden="true">
         <svg viewBox="0 0 60 60">
-          <path d="M 5 30 Q 15 15, 25 30 Q 35 45, 45 30 Q 52 18, 58 30"/>
-          <circle cx="30" cy="30" r="4" class="f"/>
+          <path d="M 8 48 L 18 18 L 30 38 L 42 18 L 52 48"/>
+          <circle cx="30" cy="38" r="3" class="f" style="opacity:.4"/>
         </svg>
       </div>
       <div>
-        <p class="artist-tag" style="opacity:.5;margin-bottom:.25rem">RESIDENTE</p>
-        <h3 class="artist-name">SLOW<br>MOTION</h3>
-        <p class="artist-tag">DJ · Producer</p>
+        <h3 class="artist-name">MIZURA</h3>
+        <p class="artist-tag">ZIGTAB II · RELOAD</p>
       </div>
     </article>
 
-    <!-- COUR.T -->
-    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="Cour.T DJ — techno ZIGTAB Porto Velho" style="transition-delay:.32s">
+    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="Jhowx DJ — ZIGTAB II" style="transition-delay:.42s">
       <div class="artist-avatar" aria-hidden="true">
         <svg viewBox="0 0 60 60">
-          <line x1="30" y1="8" x2="30" y2="52"/>
-          <line x1="10" y1="18" x2="50" y2="18"/>
-          <circle cx="12" cy="32" r="8"/>
-          <circle cx="48" cy="28" r="8"/>
-          <line x1="12" y1="40" x2="12" y2="50" stroke-width=".8" opacity=".4"/>
-          <line x1="48" y1="36" x2="48" y2="50" stroke-width=".8" opacity=".4"/>
+          <line x1="10" y1="10" x2="30" y2="30"/>
+          <line x1="50" y1="10" x2="30" y2="30"/>
+          <line x1="30" y1="30" x2="30" y2="52"/>
+          <circle cx="30" cy="30" r="4" class="f" style="opacity:.5"/>
         </svg>
       </div>
       <div>
-        <p class="artist-tag" style="opacity:.5;margin-bottom:.25rem">RESIDENTE</p>
-        <h3 class="artist-name">COUR.T</h3>
-        <p class="artist-tag">DJ · Techno</p>
+        <h3 class="artist-name">JHOWX</h3>
+        <p class="artist-tag">ZIGTAB II</p>
       </div>
     </article>
 
-    <!-- ADRYAN -->
-    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="Adryan DJ — ZIGTAB Porto Velho" style="transition-delay:.4s">
+    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="Mirandxx DJ — ZIGTAB Reload" style="transition-delay:.48s">
       <div class="artist-avatar" aria-hidden="true">
         <svg viewBox="0 0 60 60">
-          <path d="M 30 8 L 52 48 L 8 48 Z"/>
-          <line x1="20" y1="36" x2="40" y2="36" style="opacity:.4"/>
-          <circle cx="30" cy="32" r="3" class="f" style="opacity:.5"/>
+          <line x1="8" y1="18" x2="30" y2="42"/>
+          <line x1="52" y1="18" x2="30" y2="42"/>
+          <line x1="8" y1="42" x2="30" y2="18"/>
+          <line x1="52" y1="42" x2="30" y2="18"/>
         </svg>
       </div>
       <div>
-        <p class="artist-tag" style="opacity:.5;margin-bottom:.25rem">RESIDENTE</p>
-        <h3 class="artist-name">ADRYAN</h3>
-        <p class="artist-tag">DJ · Underground</p>
+        <h3 class="artist-name">MIRANDXX</h3>
+        <p class="artist-tag">ZIGTAB RELOAD</p>
+      </div>
+    </article>
+
+    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="Roddy Lima DJ — ZIGTAB Reload" style="transition-delay:.54s">
+      <div class="artist-avatar" aria-hidden="true">
+        <svg viewBox="0 0 60 60">
+          <rect x="14" y="14" width="32" height="32" rx="4"/>
+          <line x1="22" y1="30" x2="38" y2="30" style="opacity:.5"/>
+          <line x1="30" y1="22" x2="30" y2="38" style="opacity:.5"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="artist-name">RODDY<br>LIMA</h3>
+        <p class="artist-tag">ZIGTAB RELOAD</p>
+      </div>
+    </article>
+
+    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="Duarte DJ — ZIGTAB Reload" style="transition-delay:.60s">
+      <div class="artist-avatar" aria-hidden="true">
+        <svg viewBox="0 0 60 60">
+          <path d="M 12 12 L 12 48 Q 12 52 30 52 Q 48 52 48 36 Q 48 20 30 18 L 12 18"/>
+          <line x1="12" y1="30" x2="36" y2="30" style="opacity:.4"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="artist-name">DUARTE</h3>
+        <p class="artist-tag">ZIGTAB RELOAD</p>
+      </div>
+    </article>
+
+    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="Viot DJ — ZIGTAB" style="transition-delay:.66s">
+      <div class="artist-avatar" aria-hidden="true">
+        <svg viewBox="0 0 60 60">
+          <path d="M 10 15 L 30 48 L 50 15"/>
+          <line x1="18" y1="32" x2="42" y2="32" style="opacity:.4"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="artist-name">VIOT</h3>
+        <p class="artist-tag">ZIGTAB</p>
+      </div>
+    </article>
+
+    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="Ashibah DJ — ZIGTAB" style="transition-delay:.72s">
+      <div class="artist-avatar" aria-hidden="true">
+        <svg viewBox="0 0 60 60">
+          <circle cx="30" cy="30" r="16"/>
+          <path d="M 20 30 Q 25 22 30 30 Q 35 38 40 30" style="opacity:.6"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="artist-name">ASHIBAH</h3>
+        <p class="artist-tag">ZIGTAB</p>
+      </div>
+    </article>
+
+    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="Pontifexx DJ — ZIGTAB" style="transition-delay:.78s">
+      <div class="artist-avatar" aria-hidden="true">
+        <svg viewBox="0 0 60 60">
+          <line x1="30" y1="8" x2="30" y2="28"/>
+          <line x1="18" y1="16" x2="42" y2="16"/>
+          <rect x="14" y="28" width="32" height="24" rx="2"/>
+          <line x1="22" y1="40" x2="38" y2="40" style="opacity:.4"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="artist-name">PONTIFEXX</h3>
+        <p class="artist-tag">ZIGTAB</p>
+      </div>
+    </article>
+
+    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="Igor Dantas DJ — ZIGTAB" style="transition-delay:.84s">
+      <div class="artist-avatar" aria-hidden="true">
+        <svg viewBox="0 0 60 60">
+          <line x1="10" y1="12" x2="10" y2="48"/>
+          <line x1="10" y1="12" x2="30" y2="30"/>
+          <line x1="10" y1="48" x2="30" y2="30"/>
+          <line x1="30" y1="30" x2="50" y2="12"/>
+          <line x1="30" y1="30" x2="50" y2="48"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="artist-name">IGOR<br>DANTAS</h3>
+        <p class="artist-tag">ZIGTAB</p>
       </div>
     </article>
 
