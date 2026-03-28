@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO PRIMARY -->
+  <title>ZIGTAB — O Underground Chique · Porto Velho, RO</title>
+  <meta name="description" content="O planeta da música eletrônica. Eventos open air, deep house, techno e underground em Porto Velho, Rondônia. Secret Vibes, ZigTab Reload e muito mais." />
+  <meta name="keywords" content="zigtab, música eletrônica, porto velho, rondônia, deep house, techno, underground, eventos, secret vibes, open air" />
+  <link rel="canonical" href="https://zigtab.com.br/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="ZIGTAB Label" />
+  <meta name="geo.region" content="BR-RO" />
+  <meta name="geo.placename" content="Porto Velho, Rondônia" />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ZIGTAB" />
+  <meta property="og:title" content="ZIGTAB — O Underground Chique · Porto Velho, RO" />
+  <meta property="og:description" content="O planeta da música eletrônica. Eventos open air underground em Porto Velho, RO." />
+  <meta property="og:url" content="https://zigtab.com.br/" />
+  <meta property="og:image" content="https://zigtab.com.br/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ZigTab_" />
+  <meta name="twitter:creator" content="@ZigTab_" />
+  <meta name="twitter:title" content="ZIGTAB — O Underground Chique" />
+  <meta name="twitter:description" content="O planeta da música eletrônica. Porto Velho, RO." />
+  <meta name="twitter:image" content="https://zigtab.com.br/og.jpg" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://zigtab.com.br/#org",
+        "name": "ZIGTAB Label",
+        "url": "https://zigtab.com.br",
+        "logo": "https://zigtab.com.br/logo.png",
+        "description": "Produtora de eventos de música eletrônica em Porto Velho, Rondônia",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Pinheiro Machado, 1595",
+          "addressLocality": "Porto Velho",
+          "addressRegion": "RO",
+          "addressCountry": "BR"
+        },
+        "email": "suporte@zigtab.com.br",
+        "sameAs": [
+          "https://www.instagram.com/zigtab_/",
+          "https://twitter.com/ZigTab_",
+          "https://zigtab.com.br"
+        ]
+      },
+      {
+        "@type": "EventSeries",
+        "@id": "https://zigtab.com.br/#series",
+        "name": "ZIGTAB Label Party Series",
+        "description": "Série de eventos de música eletrônica underground em Porto Velho",
+        "organizer": { "@id": "https://zigtab.com.br/#org" },
+        "location": {
+          "@type": "Place",
+          "name": "Oásis Camping Club",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Estrada da Penal Km 3,5",
+            "addressLocality": "Porto Velho",
+            "addressRegion": "RO",
+            "addressCountry": "BR"
+          }
+        },
+        "genre": ["Electronic Music", "Deep House", "Techno", "Underground"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://zigtab.com.br/#site",
+        "url": "https://zigtab.com.br/",
+        "name": "ZIGTAB",
+        "inLanguage": "pt-BR"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ═══════════════════════════════════════
+       RESET + TOKENS
+    ═══════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --k:   #000000;
+      --w:   #ffffff;
+      --g:   #666666;
+      --dim: #111111;
+      --rule: 1px solid #000;
+      --display: 'Bebas Neue', sans-serif;
+      --mono: 'DM Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--w);
+      color: var(--k);
+      font-family: var(--mono);
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.65;
+      overflow-x: hidden;
+      cursor: crosshair;
+    }
+
+    ::-webkit-scrollbar { width: 2px; }
+    ::-webkit-scrollbar-track { background: var(--w); }
+    ::-webkit-scrollbar-thumb { background: var(--k); }
+    ::selection { background: var(--k); color: var(--w); }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button, input { font-family: var(--mono); }
+
+    /* ═══════════════════════════════════════
+       NAV
+    ═══════════════════════════════════════ */
+    #nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 300;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.4rem 2.5rem;
+      background: var(--w);
+      border-bottom: var(--rule);
+      transition: padding .3s ease;
+    }
+    #nav.compact { padding: .9rem 2.5rem; }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nav-logo-sq {
+      width: 10px; height: 10px;
+      background: var(--k);
+      transition: transform .35s cubic-bezier(.34,1.56,.64,1);
+    }
+    .nav-logo:hover .nav-logo-sq:first-child { transform: translate(-3px,-3px) rotate(-8deg); }
+    .nav-logo:hover .nav-logo-sq:last-child  { transform: translate(3px,3px) rotate(8deg); }
+    .nav-wordmark {
+      font-family: var(--display);
+      font-size: 1.35rem;
+      letter-spacing: .14em;
+      margin-left: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: .6rem;
+      font-weight: 500;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      position: relative;
+    }
+    .nav-links a:not(.nav-btn)::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0;
+      width: 0; height: 1px;
+      background: var(--k);
+      transition: width .28s ease;
+    }
+    .nav-links a:not(.nav-btn):hover::after { width: 100%; }
+    .nav-btn {
+      background: var(--k);
+      color: var(--w) !important;
+      padding: .5rem 1.3rem;
+      font-size: .58rem !important;
+      letter-spacing: .16em;
+      transition: background .2s, color .2s, outline .2s;
+    }
+    .nav-btn:hover {
+      background: var(--w) !important;
+      color: var(--k) !important;
+      outline: var(--rule);
+    }
+
+    /* ═══════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      padding: 9rem 2.5rem 0;
+      border-bottom: var(--rule);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* faint dot grid bg */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, #ddd 1px, transparent 1px);
+      background-size: 40px 40px;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 2.5rem;
+      padding-bottom: 5rem;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: .75rem;
+      font-size: .58rem;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--g);
+      opacity: 0;
+      animation: fadeUp .6s ease .1s forwards;
+    }
+    .hero-tag::before {
+      content: '';
+      width: 28px; height: 1px;
+      background: var(--g);
+    }
+
+    .hero-h1 {
+      font-family: var(--display);
+      font-size: clamp(4.5rem, 13.5vw, 15rem);
+      line-height: .87;
+      letter-spacing: .02em;
+      position: relative;
+    }
+    .hero-h1 .line { display: block; overflow: hidden; }
+    .hero-h1 .line > span {
+      display: block;
+      transform: translateY(110%);
+      animation: slideUp 1s cubic-bezier(.16,1,.3,1) forwards;
+    }
+    .hero-h1 .line:nth-child(1) > span { animation-delay: .12s; }
+    .hero-h1 .line:nth-child(2) > span { animation-delay: .24s; }
+    .hero-h1 .line:nth-child(3) > span { animation-delay: .36s; }
+    .hero-h1 .inv > span {
+      background: var(--k);
+      color: var(--w);
+      padding: 0 .08em;
+    }
+
+    .hero-foot {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+      opacity: 0;
+      animation: fadeUp .7s ease .65s forwards;
+    }
+    .hero-desc {
+      max-width: 280px;
+      font-size: .7rem;
+      color: var(--g);
+      line-height: 1.9;
+    }
+    .hero-stat { text-align: right; }
+    .hero-stat strong {
+      display: block;
+      font-family: var(--display);
+      font-size: 4.5rem;
+      line-height: 1;
+    }
+    .hero-stat span {
+      font-size: .58rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--g);
+    }
+
+    /* DJ set SVG — right side */
+    .hero-vis {
+      position: absolute;
+      right: 4%;
+      top: 50%;
+      transform: translateY(-48%);
+      width: min(340px, 28vw);
+      opacity: 0;
+      animation: fadeIn 1.4s ease 1s forwards;
+      z-index: 0;
+    }
+
+    /* Bottom bar */
+    .hero-bar {
+      position: relative;
+      z-index: 1;
+      border-top: var(--rule);
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+    }
+    .hero-bar-cell {
+      padding: 1.25rem 0;
+      border-right: var(--rule);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-left: 1.5rem;
+      font-size: .6rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--g);
+    }
+    .hero-bar-cell:last-child { border-right: none; }
+    .hero-bar-cell .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--k);
+      flex-shrink: 0;
+    }
+    .hero-bar-cell .dot.pulse {
+      animation: pulse 2s ease infinite;
+    }
+
+    /* ═══════════════════════════════════════
+       TICKER
+    ═══════════════════════════════════════ */
+    .ticker {
+      background: var(--k);
+      overflow: hidden;
+      padding: .85rem 0;
+    }
+    .ticker-rail {
+      display: flex;
+      gap: 3.5rem;
+      animation: ticker 26s linear infinite;
+      white-space: nowrap;
+      will-change: transform;
+    }
+    .ticker-item {
+      flex-shrink: 0;
+      color: var(--w);
+      font-size: .58rem;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .ticker-item::after { content: '◆'; font-size: .3rem; opacity: .35; }
+
+    /* ═══════════════════════════════════════
+       SECTION UTILITY
+    ═══════════════════════════════════════ */
+    .sec-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 2rem;
+      padding: 4rem 2.5rem 3rem;
+      border-bottom: var(--rule);
+    }
+    .sec-num {
+      font-family: var(--display);
+      font-size: 4.5rem;
+      line-height: 1;
+      color: #e8e8e8;
+      user-select: none;
+      flex-shrink: 0;
+    }
+    .sec-title {
+      font-family: var(--display);
+      font-size: clamp(2rem, 4vw, 4.5rem);
+      line-height: 1;
+      letter-spacing: .04em;
+    }
+    .sec-sub {
+      max-width: 220px;
+      font-size: .65rem;
+      color: var(--g);
+      line-height: 1.8;
+      text-align: right;
+    }
+
+    /* ═══════════════════════════════════════
+       EVENTOS
+    ═══════════════════════════════════════ */
+    #eventos { border-bottom: var(--rule); }
+
+    .eventos-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      border-left: var(--rule);
+    }
+
+    .ev-card {
+      border-right: var(--rule);
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      min-height: 460px;
+      position: relative;
+      overflow: hidden;
+      transition: background .28s ease, color .28s ease;
+      cursor: pointer;
+    }
+    .ev-card.featured { background: var(--k); color: var(--w); }
+    .ev-card:not(.featured):hover { background: var(--k); color: var(--w); }
+    .ev-card.featured:hover { background: var(--dim); }
+
+    .ev-card::after {
+      content: '↗';
+      position: absolute;
+      top: 1.5rem; right: 1.75rem;
+      font-size: 1rem;
+      opacity: 0;
+      transform: translate(-4px, 4px);
+      transition: opacity .25s, transform .25s;
+    }
+    .ev-card:hover::after { opacity: .45; transform: translate(0,0); }
+
+    .ev-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .56rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      border: 1px solid currentColor;
+      padding: .35rem .85rem;
+      opacity: .5;
+      width: fit-content;
+    }
+    .ev-badge.live { opacity: 1; }
+    .ev-badge.live::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: currentColor;
+      animation: pulse 1.8s ease infinite;
+    }
+
+    .ev-vis {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .ev-vis svg {
+      width: 100%;
+      max-height: 140px;
+      overflow: visible;
+    }
+    .ev-vis svg line,
+    .ev-vis svg path,
+    .ev-vis svg circle,
+    .ev-vis svg rect,
+    .ev-vis svg polyline {
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.5;
+      transition: stroke .28s ease;
+    }
+    .ev-vis svg .f { fill: currentColor; stroke: none; }
+    .ev-vis svg text { fill: currentColor; stroke: none; font-family: 'DM Mono', monospace; opacity: .35; }
+
+    .ev-meta { display: flex; flex-direction: column; gap: 1rem; }
+    .ev-name {
+      font-family: var(--display);
+      font-size: 2.2rem;
+      line-height: 1;
+      letter-spacing: .06em;
+    }
+    .ev-info {
+      display: flex;
+      flex-direction: column;
+      gap: .35rem;
+    }
+    .ev-info-row {
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      font-size: .62rem;
+      color: currentColor;
+      opacity: .45;
+      letter-spacing: .08em;
+    }
+    .ev-info-row::before { content: '—'; opacity: .4; }
+
+    .ev-btn {
+      background: currentColor;
+      border: none;
+      padding: .9rem;
+      width: 100%;
+      cursor: crosshair;
+      font-size: .6rem;
+      font-weight: 500;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      position: relative;
+      overflow: hidden;
+      transition: opacity .2s;
+    }
+    .ev-btn span {
+      position: relative;
+      z-index: 1;
+      color: var(--w);
+      mix-blend-mode: difference;
+    }
+    .ev-card.featured .ev-btn span { color: var(--k); }
+    .ev-btn:hover { opacity: .85; }
+
+    /* ═══════════════════════════════════════
+       NOSSA VIBE
+    ═══════════════════════════════════════ */
+    .vibe {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: var(--rule);
+      min-height: 65vh;
+    }
+    .vibe-text {
+      padding: 6rem 4.5rem;
+      border-right: var(--rule);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 3rem;
+    }
+    .vibe-eyebrow {
+      font-size: .6rem;
+      letter-spacing: .26em;
+      text-transform: uppercase;
+      color: var(--g);
+    }
+    .vibe-quote {
+      font-family: var(--display);
+      font-size: clamp(2.8rem, 4.5vw, 5.8rem);
+      line-height: .9;
+      letter-spacing: .03em;
+    }
+    .vibe-credit { display: flex; flex-direction: column; gap: .3rem; }
+    .vibe-credit strong {
+      font-size: .72rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .vibe-credit span { font-size: .6rem; color: var(--g); }
+
+    .vibe-diagram {
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3.5rem;
+    }
+    .vibe-diagram svg { width: min(420px, 88%); overflow: visible; }
+    .vibe-diagram svg line,
+    .vibe-diagram svg path,
+    .vibe-diagram svg circle {
+      stroke: var(--k);
+      fill: none;
+      stroke-width: 1.5;
+    }
+    .vibe-diagram svg text {
+      fill: var(--k);
+      stroke: none;
+      font-family: 'DM Mono', monospace;
+    }
+    .vibe-diagram svg .df { fill: var(--k); stroke: none; }
+
+    /* ═══════════════════════════════════════
+       ARTISTAS
+    ═══════════════════════════════════════ */
+    #artistas { border-bottom: var(--rule); }
+
+    .artists-grid {
+      display: grid;
+      grid-template-columns: repeat(6,1fr);
+      border-left: var(--rule);
+    }
+
+    .artist-card {
+      border-right: var(--rule);
+      border-bottom: var(--rule);
+      padding: 2rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      min-height: 280px;
+      transition: background .25s, color .25s;
+      cursor: pointer;
+    }
+    .artist-card:nth-child(n+7) { border-bottom: none; }
+    .artist-card:hover { background: var(--k); color: var(--w); }
+    .artist-card.tba { opacity: .22; cursor: default; }
+    .artist-card.tba:hover { background: var(--w); color: var(--k); }
+
+    .artist-avatar {
+      width: 100%;
+      aspect-ratio: 1;
+      border: 1px solid currentColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color .25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .artist-avatar svg { width: 55%; overflow: visible; }
+    .artist-avatar svg line,
+    .artist-avatar svg path,
+    .artist-avatar svg circle {
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.5;
+      transition: stroke .25s;
+    }
+    .artist-avatar svg .f { fill: currentColor; stroke: none; }
+
+    .artist-name {
+      font-family: var(--display);
+      font-size: 1.45rem;
+      letter-spacing: .08em;
+      line-height: 1;
+    }
+    .artist-tag {
+      font-size: .55rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: currentColor;
+      opacity: .4;
+    }
+
+    /* ═══════════════════════════════════════
+       GALERIA
+    ═══════════════════════════════════════ */
+    #galeria { border-bottom: var(--rule); }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      border-left: var(--rule);
+    }
+
+    .gallery-item {
+      border-right: var(--rule);
+      border-bottom: var(--rule);
+      aspect-ratio: 1;
+      background: #0a0a0a;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(5),
+    .gallery-item:nth-child(6) { border-bottom: none; }
+
+    /* Noise texture via SVG filter */
+    .gallery-item::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          0deg,
+          rgba(255,255,255,.018) 0px,
+          rgba(255,255,255,.018) 1px,
+          transparent 1px,
+          transparent 3px
+        );
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Pattern background per item */
+    .gallery-item:nth-child(1) { background: #000; }
+    .gallery-item:nth-child(2) { background: #040404; }
+    .gallery-item:nth-child(3) { background: #060606; }
+    .gallery-item:nth-child(4) { background: #020202; }
+    .gallery-item:nth-child(5) { background: #000; }
+    .gallery-item:nth-child(6) { background: #050505; }
+
+    .gallery-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: .06;
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      opacity: 0;
+      background: rgba(0,0,0,.85);
+      transition: opacity .3s ease;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-overlay-title {
+      font-family: var(--display);
+      font-size: 1.4rem;
+      color: var(--w);
+      letter-spacing: .12em;
+      text-align: center;
+    }
+    .gallery-overlay-sub {
+      font-size: .55rem;
+      color: rgba(255,255,255,.4);
+      letter-spacing: .24em;
+      text-transform: uppercase;
+    }
+
+    /* Corner labels always visible */
+    .gallery-label {
+      position: absolute;
+      bottom: 1rem; left: 1.25rem;
+      z-index: 2;
+      font-size: .55rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.2);
+    }
+    .gallery-num {
+      position: absolute;
+      top: 1rem; right: 1.25rem;
+      z-index: 2;
+      font-family: var(--display);
+      font-size: 1rem;
+      color: rgba(255,255,255,.08);
+      letter-spacing: .1em;
+    }
+
+    /* ═══════════════════════════════════════
+       NEWSLETTER
+    ═══════════════════════════════════════ */
+    .newsletter {
+      background: var(--k);
+      color: var(--w);
+      padding: 10rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 2.75rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .newsletter::before {
+      content: 'ZIGTAB';
+      position: absolute;
+      font-family: var(--display);
+      font-size: 26vw;
+      color: rgba(255,255,255,.022);
+      letter-spacing: .08em;
+      pointer-events: none;
+      top: 50%;
+      transform: translateY(-50%);
+      white-space: nowrap;
+    }
+
+    .nl-badge {
+      font-size: .58rem;
+      letter-spacing: .26em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.3);
+      border: 1px solid rgba(255,255,255,.1);
+      padding: .4rem 1rem;
+      position: relative; z-index: 1;
+    }
+    .nl-h2 {
+      font-family: var(--display);
+      font-size: clamp(3.5rem, 8.5vw, 10rem);
+      line-height: .88;
+      letter-spacing: .04em;
+      position: relative; z-index: 1;
+    }
+    .nl-sub {
+      font-size: .7rem;
+      color: rgba(255,255,255,.35);
+      max-width: 360px;
+      line-height: 1.9;
+      position: relative; z-index: 1;
+    }
+    .nl-form {
+      display: flex;
+      width: 100%;
+      max-width: 440px;
+      border: 1px solid rgba(255,255,255,.18);
+      position: relative; z-index: 1;
+    }
+    .nl-form input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--w);
+      font-size: .68rem;
+      padding: 1.1rem 1.4rem;
+      letter-spacing: .06em;
+    }
+    .nl-form input::placeholder {
+      color: rgba(255,255,255,.2);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: .58rem;
+    }
+    .nl-form button {
+      background: var(--w);
+      color: var(--k);
+      border: none;
+      padding: 1.1rem 1.6rem;
+      font-size: .58rem;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      cursor: crosshair;
+      flex-shrink: 0;
+      transition: opacity .2s;
+    }
+    .nl-form button:hover { opacity: .85; }
+    .nl-note {
+      font-size: .56rem;
+      color: rgba(255,255,255,.15);
+      letter-spacing: .1em;
+      position: relative; z-index: 1;
+    }
+
+    /* ═══════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════ */
+    footer {
+      background: var(--k);
+      color: var(--w);
+      border-top: 1px solid rgba(255,255,255,.07);
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 0;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+    .f-col {
+      padding: 3.5rem 2.5rem;
+      border-right: 1px solid rgba(255,255,255,.07);
+    }
+    .f-col:last-child { border-right: none; }
+    .f-col-label {
+      font-size: .55rem;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.25);
+      margin-bottom: 1.25rem;
+    }
+    .f-logo-wrap { display: flex; align-items: center; gap: 6px; margin-bottom: 1rem; }
+    .f-sq { width: 9px; height: 9px; background: var(--w); }
+    .f-brand {
+      font-family: var(--display);
+      font-size: 1.4rem;
+      letter-spacing: .14em;
+    }
+    .f-tagline {
+      font-size: .62rem;
+      color: rgba(255,255,255,.28);
+      line-height: 1.8;
+    }
+    .f-list { list-style: none; display: flex; flex-direction: column; gap: .65rem; }
+    .f-list a {
+      font-size: .65rem;
+      color: rgba(255,255,255,.35);
+      letter-spacing: .06em;
+      transition: color .2s;
+    }
+    .f-list a:hover { color: var(--w); }
+    .f-addr {
+      font-size: .62rem;
+      color: rgba(255,255,255,.3);
+      line-height: 2;
+    }
+    .f-addr a {
+      color: rgba(255,255,255,.5);
+      transition: color .2s;
+    }
+    .f-addr a:hover { color: var(--w); }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 2.5rem;
+      gap: 1rem;
+    }
+    .f-copy { font-size: .55rem; color: rgba(255,255,255,.18); letter-spacing: .1em; }
+    .f-social {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+    }
+    .f-social a {
+      font-size: .55rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.22);
+      transition: color .2s;
+    }
+    .f-social a:hover { color: var(--w); }
+
+    /* ═══════════════════════════════════════
+       SCROLL REVEAL
+    ═══════════════════════════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* ═══════════════════════════════════════
+       KEYFRAMES
+    ═══════════════════════════════════════ */
+    @keyframes slideUp {
+      to { transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    @keyframes ticker {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: .4; transform: scale(.7); }
+    }
+
+    /* ═══════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════ */
+    @media (max-width: 1100px) {
+      .eventos-grid { grid-template-columns: 1fr; border-left: none; }
+      .ev-card { border-left: var(--rule); border-right: none; min-height: auto; }
+      .artists-grid { grid-template-columns: repeat(3,1fr); }
+      .artist-card:nth-child(n+7) { border-bottom: var(--rule); }
+      .artist-card:nth-child(n+4):nth-child(-n+6) { border-bottom: none; }
+      .vibe { grid-template-columns: 1fr; }
+      .vibe-text { border-right: none; border-bottom: var(--rule); padding: 4rem 2rem; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .f-col:nth-child(2n) { border-right: none; }
+      .f-col:nth-child(3), .f-col:nth-child(4) { border-top: 1px solid rgba(255,255,255,.07); }
+    }
+
+    @media (max-width: 720px) {
+      #nav { padding: 1.1rem 1.25rem; }
+      .nav-links { display: none; }
+      .hero { padding: 7rem 1.25rem 0; }
+      .hero-vis { display: none; }
+      .hero-bar { grid-template-columns: 1fr; }
+      .hero-bar-cell { border-right: none; border-top: var(--rule); }
+      .sec-head { flex-direction: column; gap: .75rem; padding: 2.5rem 1.25rem 2rem; }
+      .sec-sub { text-align: left; max-width: 100%; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; border-left: none; }
+      .gallery-item { border-left: var(--rule); }
+      .gallery-item:nth-child(4), .gallery-item:nth-child(5) { border-bottom: var(--rule); }
+      .gallery-item:nth-child(6) { border-bottom: none; }
+      .gallery-item:nth-child(6) { grid-column: 1 / -1; }
+      .artists-grid { grid-template-columns: repeat(2,1fr); }
+      .newsletter { padding: 6rem 1.25rem; }
+      .footer-top { grid-template-columns: 1fr; }
+      .f-col { border-right: none !important; border-top: 1px solid rgba(255,255,255,.07); }
+      .f-col:first-child { border-top: none; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════
+     NAV
+═══════════════════════════════════ -->
+<nav role="banner" id="nav">
+  <a href="/" class="nav-logo" aria-label="ZIGTAB — Página Inicial">
+    <span class="nav-logo-sq"></span>
+    <span class="nav-logo-sq"></span>
+    <span class="nav-wordmark">ZIGTAB</span>
+  </a>
+  <ul class="nav-links" role="navigation" aria-label="Navegação principal">
+    <li><a href="#eventos">Eventos</a></li>
+    <li><a href="#artistas">Artistas</a></li>
+    <li><a href="#galeria">Galeria</a></li>
+    <li><a href="#contato">Contato</a></li>
+    <li><a href="#eventos" class="nav-btn">Próximo Evento →</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════════════════════════════════
+     HERO
+═══════════════════════════════════ -->
+<section class="hero" aria-labelledby="hero-title">
+
+  <!-- Decorative DJ set diagram -->
+  <div class="hero-vis" aria-hidden="true">
+    <svg viewBox="0 0 300 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Turntable base -->
+      <rect x="20" y="200" width="260" height="80" stroke="#000" stroke-width="1.2" opacity=".12"/>
+      <!-- Platter left -->
+      <circle cx="88" cy="200" r="55" stroke="#000" stroke-width="1.2" opacity=".18"/>
+      <circle cx="88" cy="200" r="40" stroke="#000" stroke-width="1" opacity=".12" stroke-dasharray="3 4"/>
+      <circle cx="88" cy="200" r="20" stroke="#000" stroke-width="1" opacity=".1"/>
+      <circle cx="88" cy="200" r="5" fill="#000" opacity=".15"/>
+      <!-- Groove lines left -->
+      <circle cx="88" cy="200" r="30" stroke="#000" stroke-width=".5" opacity=".06"/>
+      <circle cx="88" cy="200" r="45" stroke="#000" stroke-width=".5" opacity=".06"/>
+      <circle cx="88" cy="200" r="50" stroke="#000" stroke-width=".5" opacity=".06"/>
+      <!-- Tonearm left -->
+      <line x1="88" y1="145" x2="125" y2="168" stroke="#000" stroke-width="1.5" opacity=".22"/>
+      <circle cx="88" cy="145" r="4" fill="#000" opacity=".2"/>
+
+      <!-- Platter right -->
+      <circle cx="212" cy="200" r="55" stroke="#000" stroke-width="1.2" opacity=".18"/>
+      <circle cx="212" cy="200" r="40" stroke="#000" stroke-width="1" opacity=".12" stroke-dasharray="3 4"/>
+      <circle cx="212" cy="200" r="20" stroke="#000" stroke-width="1" opacity=".1"/>
+      <circle cx="212" cy="200" r="5" fill="#000" opacity=".15"/>
+      <circle cx="212" cy="200" r="30" stroke="#000" stroke-width=".5" opacity=".06"/>
+      <circle cx="212" cy="200" r="45" stroke="#000" stroke-width=".5" opacity=".06"/>
+      <circle cx="212" cy="200" r="50" stroke="#000" stroke-width=".5" opacity=".06"/>
+      <!-- Tonearm right -->
+      <line x1="212" y1="145" x2="175" y2="168" stroke="#000" stroke-width="1.5" opacity=".22"/>
+      <circle cx="212" cy="145" r="4" fill="#000" opacity=".2"/>
+
+      <!-- Mixer center (simplified) -->
+      <rect x="118" y="170" width="64" height="110" stroke="#000" stroke-width="1.2" opacity=".14" rx="1"/>
+      <!-- Crossfader -->
+      <line x1="124" y1="255" x2="176" y2="255" stroke="#000" stroke-width="1" opacity=".18"/>
+      <rect x="143" y="249" width="14" height="12" fill="#000" opacity=".12"/>
+      <!-- Fader lines -->
+      <line x1="135" y1="200" x2="135" y2="230" stroke="#000" stroke-width=".8" opacity=".12"/>
+      <line x1="150" y1="200" x2="150" y2="230" stroke="#000" stroke-width=".8" opacity=".12"/>
+      <line x1="165" y1="200" x2="165" y2="230" stroke="#000" stroke-width=".8" opacity=".12"/>
+      <!-- EQ knobs -->
+      <circle cx="133" cy="188" r="5" stroke="#000" stroke-width="1" opacity=".18"/>
+      <circle cx="150" cy="188" r="5" stroke="#000" stroke-width="1" opacity=".18"/>
+      <circle cx="167" cy="188" r="5" stroke="#000" stroke-width="1" opacity=".18"/>
+      <!-- Volume line -->
+      <rect x="126" y="202" width="8" height="20" fill="#000" opacity=".1"/>
+      <rect x="162" y="208" width="8" height="14" fill="#000" opacity=".1"/>
+
+      <!-- Sound waves top -->
+      <path d="M 40 100 Q 60 70, 80 100 Q 100 130, 120 100 Q 140 70, 160 100 Q 180 130, 200 100 Q 220 70, 240 100 Q 260 130, 280 100"
+            stroke="#000" stroke-width="1" fill="none" opacity=".08"/>
+      <path d="M 50 80 Q 70 50, 90 80 Q 110 110, 130 80 Q 150 50, 170 80 Q 190 110, 210 80 Q 230 50, 250 80"
+            stroke="#000" stroke-width=".8" fill="none" opacity=".05"/>
+      <path d="M 60 60 Q 80 30, 100 60 Q 120 90, 140 60 Q 160 30, 180 60 Q 200 90, 220 60"
+            stroke="#000" stroke-width=".6" fill="none" opacity=".04"/>
+
+      <!-- Frequency bars at bottom -->
+      <rect x="30"  y="290" width="6" height="20" fill="#000" opacity=".08"/>
+      <rect x="44"  y="282" width="6" height="28" fill="#000" opacity=".1"/>
+      <rect x="58"  y="286" width="6" height="24" fill="#000" opacity=".08"/>
+      <rect x="72"  y="278" width="6" height="32" fill="#000" opacity=".12"/>
+      <rect x="86"  y="284" width="6" height="26" fill="#000" opacity=".09"/>
+      <rect x="210" y="286" width="6" height="24" fill="#000" opacity=".08"/>
+      <rect x="224" y="276" width="6" height="34" fill="#000" opacity=".12"/>
+      <rect x="238" y="282" width="6" height="28" fill="#000" opacity=".1"/>
+      <rect x="252" y="280" width="6" height="30" fill="#000" opacity=".11"/>
+      <rect x="266" y="290" width="6" height="20" fill="#000" opacity=".07"/>
+    </svg>
+  </div>
+
+  <div class="hero-inner">
+    <p class="hero-tag" aria-label="Localização: Porto Velho, Rondônia — est. 2022">
+      Porto Velho · RO · Est. 2022
+    </p>
+    <h1 class="hero-h1" id="hero-title">
+      <span class="line"><span>O UNDER</span></span>
+      <span class="line"><span>GROUND</span></span>
+      <span class="line inv"><span>CHIQUE.</span></span>
+    </h1>
+    <div class="hero-foot">
+      <p class="hero-desc">
+        Música eletrônica de alto nível.<br>
+        Open air. Som de ponta.<br>
+        Porto Velho não é mais a mesma.
+      </p>
+      <div class="hero-stat" aria-label="Mais de 5 edições realizadas">
+        <strong>5+</strong>
+        <span>Edições Realizadas</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-bar" aria-hidden="true">
+    <div class="hero-bar-cell">
+      <span class="dot pulse"></span>
+      Próxima edição em breve
+    </div>
+    <div class="hero-bar-cell">
+      <span class="dot"></span>
+      Oásis Camping Club · PVH
+    </div>
+    <div class="hero-bar-cell">
+      <span class="dot"></span>
+      Ingressos Nominais
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     TICKER
+═══════════════════════════════════ -->
+<div class="ticker" aria-hidden="true" role="marquee">
+  <div class="ticker-rail">
+    <span class="ticker-item">Música Eletrônica</span>
+    <span class="ticker-item">Porto Velho</span>
+    <span class="ticker-item">Deep House</span>
+    <span class="ticker-item">Techno</span>
+    <span class="ticker-item">Open Air</span>
+    <span class="ticker-item">Underground</span>
+    <span class="ticker-item">Secret Vibes</span>
+    <span class="ticker-item">ZigTab Label</span>
+    <span class="ticker-item">Rondônia</span>
+    <!-- dup for seamless -->
+    <span class="ticker-item">Música Eletrônica</span>
+    <span class="ticker-item">Porto Velho</span>
+    <span class="ticker-item">Deep House</span>
+    <span class="ticker-item">Techno</span>
+    <span class="ticker-item">Open Air</span>
+    <span class="ticker-item">Underground</span>
+    <span class="ticker-item">Secret Vibes</span>
+    <span class="ticker-item">ZigTab Label</span>
+    <span class="ticker-item">Rondônia</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     EVENTOS
+═══════════════════════════════════ -->
+<section id="eventos" aria-labelledby="ev-heading">
+  <header class="sec-head reveal">
+    <span class="sec-num" aria-hidden="true">01</span>
+    <h2 class="sec-title" id="ev-heading">PRÓXIMOS EVENTOS</h2>
+    <p class="sec-sub">Experiências open air com som de ponta no coração de Rondônia.</p>
+  </header>
+
+  <div class="eventos-grid" role="list">
+
+    <!-- SECRET VIBES — featured -->
+    <article class="ev-card featured reveal" role="listitem" tabindex="0" aria-label="Evento: Secret Vibes">
+      <div class="ev-badge live">Em Breve</div>
+
+      <div class="ev-vis" aria-hidden="true">
+        <svg viewBox="0 0 240 120">
+          <!-- Keyhole / secret icon -->
+          <circle cx="120" cy="52" r="30"/>
+          <path d="M 102 68 L 96 100 L 144 100 L 138 68"/>
+          <!-- Small stars -->
+          <circle cx="40" cy="30" r="2.5" class="f" style="opacity:.4"/>
+          <circle cx="200" cy="20" r="2" class="f" style="opacity:.3"/>
+          <circle cx="55" cy="80" r="1.5" class="f" style="opacity:.25"/>
+          <circle cx="190" cy="70" r="2.5" class="f" style="opacity:.35"/>
+          <circle cx="175" cy="95" r="1.5" class="f" style="opacity:.2"/>
+        </svg>
+      </div>
+
+      <div class="ev-meta">
+        <h3 class="ev-name">SECRET<br>VIBES</h3>
+        <div class="ev-info">
+          <div class="ev-info-row">A Confirmar · 2025</div>
+          <div class="ev-info-row">Oásis Camping Club</div>
+          <div class="ev-info-row">Ingresso Nominal</div>
+        </div>
+      </div>
+      <button class="ev-btn" aria-label="Comprar ingresso para Secret Vibes">
+        <span>Garantir Ingresso →</span>
+      </button>
+    </article>
+
+    <!-- ZIGTAB RELOAD -->
+    <article class="ev-card reveal" role="listitem" tabindex="0" aria-label="Evento: ZigTab Reload" style="transition-delay:.1s">
+      <div class="ev-badge">Em Breve</div>
+
+      <div class="ev-vis" aria-hidden="true">
+        <svg viewBox="0 0 240 120">
+          <!-- Reload / circular arrow -->
+          <path d="M 120 30 A 42 42 0 1 1 78 72"/>
+          <polyline points="68,58 78,72 92,62"/>
+          <!-- Frequency bars -->
+          <rect x="30" y="85" width="7" height="22" class="f" style="opacity:.15"/>
+          <rect x="42" y="76" width="7" height="31" class="f" style="opacity:.2"/>
+          <rect x="54" y="82" width="7" height="25" class="f" style="opacity:.15"/>
+          <rect x="174" y="78" width="7" height="29" class="f" style="opacity:.2"/>
+          <rect x="186" y="85" width="7" height="22" class="f" style="opacity:.15"/>
+          <rect x="198" y="72" width="7" height="35" class="f" style="opacity:.22"/>
+        </svg>
+      </div>
+
+      <div class="ev-meta">
+        <h3 class="ev-name">ZIGTAB<br>RELOAD</h3>
+        <div class="ev-info">
+          <div class="ev-info-row">A Confirmar · 2025</div>
+          <div class="ev-info-row">Oásis Camping Club</div>
+          <div class="ev-info-row">Ingresso Nominal</div>
+        </div>
+      </div>
+      <button class="ev-btn">
+        <span>Lista de Espera →</span>
+      </button>
+    </article>
+
+    <!-- UNDER THE CHRISTMAS TREE -->
+    <article class="ev-card reveal" role="listitem" tabindex="0" aria-label="Evento: Under The Christmas Tree" style="transition-delay:.2s">
+      <div class="ev-badge">Dezembro 2025</div>
+
+      <div class="ev-vis" aria-hidden="true">
+        <svg viewBox="0 0 240 120">
+          <!-- Stylized tree (triangles strunken) -->
+          <polygon points="120,15 155,55 85,55"/>
+          <polygon points="120,38 162,82 78,82"/>
+          <polygon points="120,60 168,108 72,108"/>
+          <rect x="110" y="108" width="20" height="12" class="f" style="opacity:.15"/>
+          <!-- Ornaments -->
+          <circle cx="95" cy="48" r="3.5" class="f" style="opacity:.3"/>
+          <circle cx="148" cy="62" r="3" class="f" style="opacity:.25"/>
+          <circle cx="86" cy="90" r="3" class="f" style="opacity:.28"/>
+          <circle cx="160" cy="88" r="3.5" class="f" style="opacity:.22"/>
+        </svg>
+      </div>
+
+      <div class="ev-meta">
+        <h3 class="ev-name">UNDER<br>THE TREE</h3>
+        <div class="ev-info">
+          <div class="ev-info-row">Dezembro · 2025</div>
+          <div class="ev-info-row">Oásis Camping Club</div>
+          <div class="ev-info-row">Ingresso Nominal</div>
+        </div>
+      </div>
+      <button class="ev-btn">
+        <span>Notificar-me →</span>
+      </button>
+    </article>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     NOSSA VIBE
+═══════════════════════════════════ -->
+<section class="vibe" id="vibe" aria-labelledby="vibe-heading">
+  <div class="vibe-text reveal">
+    <p class="vibe-eyebrow">Nossa Filosofia</p>
+    <blockquote class="vibe-quote" id="vibe-heading">
+      RAW<br>
+      POR DENTRO.<br>
+      REFINADO<br>
+      POR FORA.
+    </blockquote>
+    <div class="vibe-credit">
+      <strong>ZIGTAB Label</strong>
+      <span>O planeta da música eletrônica · Porto Velho</span>
+    </div>
+  </div>
+
+  <div class="vibe-diagram reveal" aria-hidden="true">
+    <svg viewBox="0 0 400 360">
+      <!-- Axes -->
+      <line x1="200" y1="20" x2="200" y2="340"/>
+      <line x1="20"  y1="180" x2="380" y2="180"/>
+
+      <!-- Arrowheads -->
+      <polyline points="192,28 200,14 208,28"/>
+      <polyline points="192,332 200,346 208,332"/>
+      <polyline points="28,172 14,180 28,188"/>
+      <polyline points="372,172 386,180 372,188"/>
+
+      <!-- Axis labels -->
+      <text x="200" y="10" text-anchor="middle" font-size="10" letter-spacing="2">REFINADO</text>
+      <text x="200" y="360" text-anchor="middle" font-size="10" letter-spacing="2">RAW</text>
+      <text x="12" y="184" text-anchor="middle" font-size="10" letter-spacing="2">MAINSTREAM</text>
+      <text x="388" y="184" text-anchor="middle" font-size="10" letter-spacing="2">UNDER</text>
+
+      <!-- Quadrant labels -->
+      <text x="310" y="100" text-anchor="middle" font-size="9" opacity=".3" letter-spacing="1.5">LUXURY</text>
+      <text x="90"  y="100" text-anchor="middle" font-size="9" opacity=".3" letter-spacing="1.5">COMERCIAL</text>
+      <text x="310" y="270" text-anchor="middle" font-size="9" opacity=".3" letter-spacing="1.5">RAVE</text>
+      <text x="90"  y="270" text-anchor="middle" font-size="9" opacity=".3" letter-spacing="1.5">BÁSICO</text>
+
+      <!-- Subtle grid -->
+      <line x1="20" y1="90"  x2="380" y2="90"  stroke-width=".5" opacity=".08"/>
+      <line x1="20" y1="270" x2="380" y2="270" stroke-width=".5" opacity=".08"/>
+      <line x1="110" y1="20" x2="110" y2="340" stroke-width=".5" opacity=".08"/>
+      <line x1="290" y1="20" x2="290" y2="340" stroke-width=".5" opacity=".08"/>
+
+      <!-- ZIGTAB position — top right (Refinado + Underground) -->
+      <circle cx="300" cy="90" r="22" stroke-width="2"/>
+      <circle cx="300" cy="90" r="8" class="df"/>
+      <line x1="300" y1="68" x2="300" y2="50" stroke-width="1" stroke-dasharray="3,3" opacity=".4"/>
+      <text x="326" y="75" font-size="9" letter-spacing="1.5">ZIGTAB</text>
+
+      <!-- Competitors (faint) -->
+      <circle cx="100" cy="150" r="8" opacity=".12"/>
+      <text x="115" y="154" font-size="7" opacity=".2">outros</text>
+      <circle cx="240" cy="250" r="6" opacity=".1"/>
+      <circle cx="155" cy="200" r="5" opacity=".1"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     ARTISTAS
+═══════════════════════════════════ -->
+<section id="artistas" aria-labelledby="art-heading">
+  <header class="sec-head reveal">
+    <span class="sec-num" aria-hidden="true">02</span>
+    <h2 class="sec-title" id="art-heading">ARTISTAS</h2>
+    <p class="sec-sub">Os protagonistas do som da ZIGTAB Label.</p>
+  </header>
+
+  <div class="artists-grid" role="list">
+
+    <!-- VISAGE -->
+    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="DJ Visage">
+      <div class="artist-avatar" aria-hidden="true">
+        <svg viewBox="0 0 60 60">
+          <circle cx="30" cy="22" r="12"/>
+          <path d="M 10 52 Q 10 36 30 36 Q 50 36 50 52"/>
+          <!-- Mask element -->
+          <line x1="22" y1="20" x2="28" y2="20"/>
+          <line x1="32" y1="20" x2="38" y2="20"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="artist-name">VISAGE</h3>
+        <p class="artist-tag">DJ · Porto Velho</p>
+      </div>
+    </article>
+
+    <!-- SLOWMOTION -->
+    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="DJ Slowmotion" style="transition-delay:.08s">
+      <div class="artist-avatar" aria-hidden="true">
+        <svg viewBox="0 0 60 60">
+          <!-- Slow wave / flow -->
+          <path d="M 5 30 Q 15 15, 25 30 Q 35 45, 45 30 Q 52 18, 58 30"/>
+          <circle cx="30" cy="30" r="4" class="f"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="artist-name">SLOW<br>MOTION</h3>
+        <p class="artist-tag">DJ · Producer</p>
+      </div>
+    </article>
+
+    <!-- COUR.T -->
+    <article class="artist-card reveal" role="listitem" tabindex="0" aria-label="DJ Cour.T" style="transition-delay:.16s">
+      <div class="artist-avatar" aria-hidden="true">
+        <svg viewBox="0 0 60 60">
+          <!-- Scales of justice / court ref -->
+          <line x1="30" y1="8" x2="30" y2="52"/>
+          <line x1="10" y1="18" x2="50" y2="18"/>
+          <circle cx="12" cy="32" r="8"/>
+          <circle cx="48" cy="28" r="8"/>
+          <line x1="12" y1="40" x2="12" y2="50" stroke-width=".8" opacity=".4"/>
+          <line x1="48" y1="36" x2="48" y2="50" stroke-width=".8" opacity=".4"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="artist-name">COUR.T</h3>
+        <p class="artist-tag">DJ · Techno</p>
+      </div>
+    </article>
+
+    <!-- TBA x3 -->
+    <article class="artist-card tba reveal" role="listitem" style="transition-delay:.24s" aria-label="Artista a confirmar">
+      <div class="artist-avatar" aria-hidden="true">
+        <svg viewBox="0 0 60 60">
+          <line x1="15" y1="30" x2="45" y2="30" stroke-dasharray="3,3"/>
+          <line x1="30" y1="15" x2="30" y2="45" stroke-dasharray="3,3"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="artist-name">TBA</h3>
+        <p class="artist-tag">Em Breve</p>
+      </div>
+    </article>
+
+    <article class="artist-card tba reveal" role="listitem" style="transition-delay:.32s" aria-label="Artista a confirmar">
+      <div class="artist-avatar" aria-hidden="true">
+        <svg viewBox="0 0 60 60">
+          <line x1="15" y1="30" x2="45" y2="30" stroke-dasharray="3,3"/>
+          <line x1="30" y1="15" x2="30" y2="45" stroke-dasharray="3,3"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="artist-name">TBA</h3>
+        <p class="artist-tag">Em Breve</p>
+      </div>
+    </article>
+
+    <article class="artist-card tba reveal" role="listitem" style="transition-delay:.4s" aria-label="Artista a confirmar">
+      <div class="artist-avatar" aria-hidden="true">
+        <svg viewBox="0 0 60 60">
+          <line x1="15" y1="30" x2="45" y2="30" stroke-dasharray="3,3"/>
+          <line x1="30" y1="15" x2="30" y2="45" stroke-dasharray="3,3"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="artist-name">TBA</h3>
+        <p class="artist-tag">Em Breve</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     GALERIA
+═══════════════════════════════════ -->
+<section id="galeria" aria-labelledby="gal-heading">
+  <header class="sec-head reveal">
+    <span class="sec-num" aria-hidden="true">03</span>
+    <h2 class="sec-title" id="gal-heading">GALERIA</h2>
+    <p class="sec-sub">Momentos exclusivos de cada edição. Acesso mediante cadastro.</p>
+  </header>
+
+  <div class="gallery-grid" role="list" aria-label="Galeria de fotos dos eventos">
+
+    <div class="gallery-item reveal" role="listitem" tabindex="0" aria-label="Secret Vibes — fotos exclusivas">
+      <svg class="gallery-svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+        <circle cx="200" cy="200" r="150" stroke="white" stroke-width="1" fill="none"/>
+        <circle cx="200" cy="200" r="100" stroke="white" stroke-width=".7" fill="none"/>
+        <circle cx="200" cy="200" r="50"  stroke="white" stroke-width=".4" fill="none"/>
+        <line x1="50" y1="200" x2="350" y2="200" stroke="white" stroke-width=".5"/>
+        <line x1="200" y1="50" x2="200" y2="350" stroke="white" stroke-width=".5"/>
+      </svg>
+      <span class="gallery-num" aria-hidden="true">01</span>
+      <span class="gallery-label" aria-hidden="true">Secret Vibes</span>
+      <div class="gallery-overlay">
+        <p class="gallery-overlay-title">Secret Vibes</p>
+        <p class="gallery-overlay-sub">Acesso Exclusivo</p>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal" role="listitem" tabindex="0" aria-label="ZigTab Reload — fotos exclusivas" style="transition-delay:.08s">
+      <svg class="gallery-svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+        <rect x="60" y="60" width="280" height="280" stroke="white" stroke-width="1" fill="none"/>
+        <rect x="120" y="120" width="160" height="160" stroke="white" stroke-width=".7" fill="none"/>
+        <rect x="170" y="170" width="60" height="60" stroke="white" stroke-width=".4" fill="none"/>
+        <line x1="60" y1="60" x2="340" y2="340" stroke="white" stroke-width=".4"/>
+        <line x1="340" y1="60" x2="60" y2="340" stroke="white" stroke-width=".4"/>
+      </svg>
+      <span class="gallery-num" aria-hidden="true">02</span>
+      <span class="gallery-label" aria-hidden="true">ZigTab Reload</span>
+      <div class="gallery-overlay">
+        <p class="gallery-overlay-title">ZigTab Reload</p>
+        <p class="gallery-overlay-sub">Acesso Exclusivo</p>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal" role="listitem" tabindex="0" aria-label="Label Party — fotos exclusivas" style="transition-delay:.16s">
+      <svg class="gallery-svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+        <polygon points="200,30 370,310 30,310" stroke="white" stroke-width="1" fill="none"/>
+        <polygon points="200,90 320,285 80,285" stroke="white" stroke-width=".6" fill="none"/>
+        <polygon points="200,150 270,260 130,260" stroke="white" stroke-width=".4" fill="none"/>
+      </svg>
+      <span class="gallery-num" aria-hidden="true">03</span>
+      <span class="gallery-label" aria-hidden="true">Label Party</span>
+      <div class="gallery-overlay">
+        <p class="gallery-overlay-title">Label Party</p>
+        <p class="gallery-overlay-sub">Acesso Exclusivo</p>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal" role="listitem" tabindex="0" aria-label="Open Air — fotos exclusivas" style="transition-delay:.24s">
+      <svg class="gallery-svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+        <path d="M 50 350 Q 125 200, 200 180 Q 275 160, 350 50" stroke="white" stroke-width="1" fill="none"/>
+        <path d="M 50 350 Q 125 240, 200 210 Q 275 180, 350 80" stroke="white" stroke-width=".6" fill="none"/>
+        <path d="M 50 350 Q 125 280, 200 250 Q 275 220, 350 120" stroke="white" stroke-width=".4" fill="none"/>
+      </svg>
+      <span class="gallery-num" aria-hidden="true">04</span>
+      <span class="gallery-label" aria-hidden="true">Open Air</span>
+      <div class="gallery-overlay">
+        <p class="gallery-overlay-title">Open Air</p>
+        <p class="gallery-overlay-sub">Acesso Exclusivo</p>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal" role="listitem" tabindex="0" aria-label="After Oficial — fotos exclusivas" style="transition-delay:.32s">
+      <svg class="gallery-svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+        <!-- Grid of dots -->
+        <circle cx="80"  cy="80"  r="3" fill="white" opacity=".8"/>
+        <circle cx="160" cy="80"  r="3" fill="white" opacity=".6"/>
+        <circle cx="240" cy="80"  r="3" fill="white" opacity=".8"/>
+        <circle cx="320" cy="80"  r="3" fill="white" opacity=".5"/>
+        <circle cx="80"  cy="160" r="3" fill="white" opacity=".5"/>
+        <circle cx="160" cy="160" r="3" fill="white" opacity=".9"/>
+        <circle cx="240" cy="160" r="3" fill="white" opacity=".7"/>
+        <circle cx="320" cy="160" r="3" fill="white" opacity=".4"/>
+        <circle cx="80"  cy="240" r="3" fill="white" opacity=".7"/>
+        <circle cx="160" cy="240" r="3" fill="white" opacity=".4"/>
+        <circle cx="240" cy="240" r="3" fill="white" opacity=".9"/>
+        <circle cx="320" cy="240" r="3" fill="white" opacity=".6"/>
+        <circle cx="80"  cy="320" r="3" fill="white" opacity=".5"/>
+        <circle cx="160" cy="320" r="3" fill="white" opacity=".7"/>
+        <circle cx="240" cy="320" r="3" fill="white" opacity=".4"/>
+        <circle cx="320" cy="320" r="3" fill="white" opacity=".8"/>
+      </svg>
+      <span class="gallery-num" aria-hidden="true">05</span>
+      <span class="gallery-label" aria-hidden="true">After Oficial</span>
+      <div class="gallery-overlay">
+        <p class="gallery-overlay-title">After Oficial</p>
+        <p class="gallery-overlay-sub">Acesso Exclusivo</p>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal" role="listitem" tabindex="0" aria-label="Under The Christmas Tree — fotos exclusivas" style="transition-delay:.4s">
+      <svg class="gallery-svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+        <path d="M 40 340 Q 200 20, 360 340 Z" stroke="white" stroke-width="1" fill="none"/>
+        <path d="M 80 280 Q 200 80, 320 280 Z" stroke="white" stroke-width=".7" fill="none"/>
+        <path d="M 120 220 Q 200 140, 280 220 Z" stroke="white" stroke-width=".5" fill="none"/>
+        <line x1="200" y1="340" x2="200" y2="370" stroke="white" stroke-width="1"/>
+      </svg>
+      <span class="gallery-num" aria-hidden="true">06</span>
+      <span class="gallery-label" aria-hidden="true">Under The Tree</span>
+      <div class="gallery-overlay">
+        <p class="gallery-overlay-title">Under The Tree</p>
+        <p class="gallery-overlay-sub">Acesso Exclusivo</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     NEWSLETTER
+═══════════════════════════════════ -->
+<section id="newsletter" class="newsletter" aria-labelledby="nl-heading">
+  <span class="nl-badge" aria-hidden="true">Comunidade ZIGTAB</span>
+  <h2 class="nl-h2" id="nl-heading">
+    FIQUE<br>
+    POR<br>
+    DENTRO.
+  </h2>
+  <p class="nl-sub">
+    Primeiro acesso a ingressos.<br>
+    Line-ups antes de todo mundo.<br>
+    Conteúdo exclusivo da cena.
+  </p>
+  <form class="nl-form" action="#" method="post" aria-label="Inscrição na newsletter ZIGTAB" id="nl-form">
+    <input
+      type="email"
+      name="email"
+      placeholder="seu@email.com"
+      required
+      aria-label="Endereço de e-mail"
+      autocomplete="email"
+    />
+    <button type="submit">Entrar →</button>
+  </form>
+  <p class="nl-note" role="note">Sem spam. Cancele quando quiser.</p>
+</section>
+
+<!-- ═══════════════════════════════════
+     FOOTER
+═══════════════════════════════════ -->
+<footer id="contato" role="contentinfo">
+  <div class="footer-top">
+
+    <div class="f-col">
+      <div class="f-logo-wrap">
+        <span class="f-sq"></span>
+        <span class="f-sq"></span>
+        <span class="f-brand">ZIGTAB</span>
+      </div>
+      <p class="f-tagline">
+        O planeta da música eletrônica.<br>
+        O underground chique.<br>
+        Porto Velho, Rondônia.
+      </p>
+    </div>
+
+    <div class="f-col">
+      <p class="f-col-label">Navegação</p>
+      <ul class="f-list">
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#artistas">Artistas</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="https://zigtab.com.br/pre-venda" rel="noopener">Pré-venda</a></li>
+      </ul>
+    </div>
+
+    <div class="f-col">
+      <p class="f-col-label">Redes Sociais</p>
+      <ul class="f-list">
+        <li><a href="https://www.instagram.com/zigtab_/" rel="noopener" target="_blank">Instagram @zigtab_</a></li>
+        <li><a href="https://twitter.com/ZigTab_" rel="noopener" target="_blank">Twitter @ZigTab_</a></li>
+        <li><a href="https://facebook.com/zigtab" rel="noopener" target="_blank">Facebook</a></li>
+        <li><a href="https://br.pinterest.com/zigtab" rel="noopener" target="_blank">Pinterest</a></li>
+      </ul>
+    </div>
+
+    <div class="f-col" id="contato-info">
+      <p class="f-col-label">Contato</p>
+      <address class="f-addr" style="font-style:normal">
+        Av. Pinheiro Machado, 1595<br>
+        Porto Velho, RO — Brasil<br><br>
+        <a href="mailto:suporte@zigtab.com.br">suporte@zigtab.com.br</a><br>
+        <a href="https://zigtab.com.br" rel="noopener">zigtab.com.br</a>
+      </address>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p class="f-copy">© 2025 ZIGTAB Label. Todos os direitos reservados.</p>
+    <nav aria-label="Links do rodapé">
+      <ul class="f-social">
+        <li><a href="https://www.instagram.com/zigtab_/" rel="noopener" target="_blank">Instagram</a></li>
+        <li><a href="#">Privacidade</a></li>
+        <li><a href="#">Termos</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  /* ── Nav compact on scroll ── */
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('compact', window.scrollY > 55);
+  }, { passive: true });
+
+  /* ── Scroll reveal ── */
+  const revEls = document.querySelectorAll('.reveal');
+  const ro = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); }
+    });
+  }, { threshold: 0.06, rootMargin: '0px 0px -32px 0px' });
+  revEls.forEach(el => ro.observe(el));
+
+  /* ── Newsletter submit ── */
+  const nlForm = document.getElementById('nl-form');
+  nlForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const btn = nlForm.querySelector('button');
+    btn.textContent = 'Inscrito ✓';
+    nlForm.querySelector('input').value = '';
+    btn.disabled = true;
+  });
+
+  /* ── Event cards & artist cards keyboard nav ── */
+  document.querySelectorAll('.ev-card, .artist-card:not(.tba), .gallery-item').forEach(el => {
+    el.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+    });
+  });
+
+  /* ── Event card buttons ── */
+  document.querySelectorAll('.ev-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      if (btn.querySelector('span').textContent.includes('Inscrito')) return;
+      btn.querySelector('span').textContent = 'Em breve — aguarde!';
+    });
+  });
+</script>
+</body>
+</html>
