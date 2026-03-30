@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SECRET VIBE — Fotos Exclusivas · ZIGTAB</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --k:      #111111;
+      --w:      #ffffff;
+      --g:      #888888;
+      --dim:    #1a1a1a;
+      --neon:   #CCFF00;
+      --violet: #7B2FBE;
+      --red:    #ff4455;
+      --rule:   1px solid #2a2a2a;
+      --display: 'Bebas Neue', sans-serif;
+      --mono:   'DM Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--k);
+      color: var(--w);
+      font-family: var(--mono);
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.65;
+      overflow-x: hidden;
+      cursor: crosshair;
+      min-height: 100vh;
+    }
+
+    ::-webkit-scrollbar { width: 2px; }
+    ::-webkit-scrollbar-track { background: var(--k); }
+    ::-webkit-scrollbar-thumb { background: var(--neon); }
+    ::selection { background: var(--neon); color: var(--k); }
+
+    a { color: inherit; text-decoration: none; }
+    button, input { font-family: var(--mono); cursor: crosshair; }
+    img { display: block; max-width: 100%; }
+
+    /* ═══════════════════════════════
+       NAV
+    ═══════════════════════════════ */
+    #nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 300;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.4rem 2.5rem;
+      background: var(--k);
+      border-bottom: var(--rule);
+    }
+
+    .nav-wordmark {
+      font-family: var(--display);
+      font-size: 1.35rem;
+      letter-spacing: .14em;
+    }
+
+    .nav-label {
+      font-size: .55rem;
+      font-weight: 500;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--g);
+    }
+
+    /* ═══════════════════════════════
+       STEPS — base
+    ═══════════════════════════════ */
+    .step { display: none; }
+
+    .step.active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 8rem 2.5rem 4rem;
+      animation: fadeUp .45s ease forwards;
+    }
+
+    #step-gallery.active {
+      justify-content: flex-start;
+      padding: 0;
+      padding-top: 5.5rem;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    /* ═══════════════════════════════
+       STEP 1 — VERIFICAR NOME
+    ═══════════════════════════════ */
+    .lock-tag {
+      display: inline-block;
+      font-size: .52rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--neon);
+      border: 1px solid var(--neon);
+      padding: .35rem 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .lock-title {
+      font-family: var(--display);
+      font-size: clamp(3.5rem, 13vw, 8.5rem);
+      letter-spacing: .04em;
+      line-height: .92;
+      text-align: center;
+      margin-bottom: .6rem;
+    }
+
+    .lock-sub {
+      font-size: .6rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--g);
+      margin-bottom: 3.5rem;
+    }
+
+    .search-wrap {
+      width: 100%;
+      max-width: 460px;
+    }
+
+    .search-input {
+      width: 100%;
+      background: var(--dim);
+      border: none;
+      border-bottom: 2px solid var(--neon);
+      color: var(--w);
+      font-size: .85rem;
+      letter-spacing: .07em;
+      padding: 1.1rem 1.4rem;
+      outline: none;
+      transition: background .2s;
+    }
+    .search-input::placeholder { color: var(--g); }
+    .search-input:focus { background: #1d1d1d; }
+
+    .search-btn {
+      width: 100%;
+      margin-top: .75rem;
+      background: var(--neon);
+      color: var(--k);
+      border: none;
+      padding: 1.05rem;
+      font-size: .62rem;
+      font-weight: 500;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      transition: background .2s, color .2s;
+    }
+    .search-btn:hover:not(:disabled) { background: var(--violet); color: var(--w); }
+    .search-btn:disabled { background: #2a2a2a; color: var(--g); }
+
+    .msg-error {
+      margin-top: .9rem;
+      font-size: .6rem;
+      letter-spacing: .12em;
+      color: var(--red);
+      text-align: center;
+      min-height: 1.1em;
+    }
+
+    .search-hint {
+      margin-top: 2.8rem;
+      font-size: .57rem;
+      letter-spacing: .1em;
+      color: var(--g);
+      text-align: center;
+      max-width: 380px;
+      line-height: 1.9;
+    }
+
+    /* ═══════════════════════════════
+       STEP 2 — CONTATO
+    ═══════════════════════════════ */
+    .found-badge {
+      display: flex;
+      align-items: center;
+      gap: .55rem;
+      font-size: .52rem;
+      letter-spacing: .26em;
+      text-transform: uppercase;
+      color: var(--neon);
+      margin-bottom: 1.4rem;
+    }
+    .found-badge::before {
+      content: '';
+      display: block;
+      width: 7px; height: 7px;
+      background: var(--neon);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .found-name {
+      font-family: var(--display);
+      font-size: clamp(2rem, 7vw, 4.8rem);
+      letter-spacing: .06em;
+      text-align: center;
+      line-height: 1;
+      margin-bottom: .5rem;
+      max-width: 600px;
+    }
+
+    .found-desc {
+      font-size: .6rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--g);
+      text-align: center;
+      margin-bottom: 2.8rem;
+    }
+
+    .contact-form {
+      width: 100%;
+      max-width: 460px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: .3rem;
+    }
+
+    .field label {
+      font-size: .52rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--g);
+    }
+
+    .contact-input {
+      width: 100%;
+      background: var(--dim);
+      border: none;
+      border-bottom: 1px solid #333;
+      color: var(--w);
+      font-size: .82rem;
+      letter-spacing: .06em;
+      padding: .9rem 1.1rem;
+      outline: none;
+      transition: border-color .2s;
+    }
+    .contact-input::placeholder { color: #444; }
+    .contact-input:focus { border-bottom-color: var(--neon); }
+
+    .confirm-btn {
+      margin-top: .4rem;
+      width: 100%;
+      background: var(--neon);
+      color: var(--k);
+      border: none;
+      padding: 1.05rem;
+      font-size: .62rem;
+      font-weight: 500;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      transition: background .2s, color .2s;
+    }
+    .confirm-btn:hover:not(:disabled) { background: var(--violet); color: var(--w); }
+    .confirm-btn:disabled { background: #2a2a2a; color: var(--g); }
+
+    .contact-note {
+      margin-top: 1rem;
+      font-size: .54rem;
+      letter-spacing: .1em;
+      color: #444;
+      text-align: center;
+    }
+
+    /* ═══════════════════════════════
+       STEP 3 — GALERIA
+    ═══════════════════════════════ */
+    .gallery-bar {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 1.4rem 2.5rem;
+      border-bottom: var(--rule);
+    }
+
+    .gallery-title {
+      font-family: var(--display);
+      font-size: 2rem;
+      letter-spacing: .1em;
+    }
+
+    .gallery-meta {
+      font-size: .55rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--g);
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 3px;
+      padding: 3px;
+    }
+
+    .photo-item {
+      aspect-ratio: 3/2;
+      overflow: hidden;
+      background: var(--dim);
+      cursor: zoom-in;
+      position: relative;
+    }
+
+    .photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s ease, opacity .35s ease;
+      opacity: 0;
+    }
+    .photo-item img.loaded { opacity: 1; }
+    .photo-item:hover img { transform: scale(1.05); }
+
+    .skeleton {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #1a1a1a 25%, #222 50%, #1a1a1a 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.6s infinite;
+    }
+    @keyframes shimmer {
+      0%   { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    /* ═══════════════════════════════
+       LIGHTBOX
+    ═══════════════════════════════ */
+    #lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 900;
+      background: rgba(0,0,0,.96);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s ease;
+    }
+    #lightbox.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    #lb-img {
+      max-width: 90vw;
+      max-height: 88vh;
+      object-fit: contain;
+    }
+
+    #lb-loading {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lb-btn {
+      position: absolute;
+      background: none;
+      border: none;
+      font-family: var(--mono);
+      font-size: .58rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--g);
+      transition: color .2s;
+      padding: .8rem 1.2rem;
+    }
+    .lb-btn:hover { color: var(--neon); }
+
+    .lb-close { top: 1.4rem; right: 2rem; }
+    .lb-prev  { left: 1rem; top: 50%; transform: translateY(-50%); }
+    .lb-next  { right: 1rem; top: 50%; transform: translateY(-50%); }
+
+    .lb-counter {
+      position: absolute;
+      bottom: 1.4rem;
+      font-size: .52rem;
+      letter-spacing: .22em;
+      color: var(--g);
+      pointer-events: none;
+    }
+
+    /* ═══════════════════════════════
+       SPINNER
+    ═══════════════════════════════ */
+    .spinner {
+      display: inline-block;
+      width: 16px; height: 16px;
+      border: 2px solid #333;
+      border-top-color: var(--neon);
+      border-radius: 50%;
+      animation: spin .65s linear infinite;
+      vertical-align: middle;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ═══════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════ */
+    @media (max-width: 600px) {
+      #nav { padding: 1rem 1.5rem; }
+      .step.active { padding: 7rem 1.5rem 3rem; }
+      #step-gallery.active { padding-top: 5rem; padding-left: 0; padding-right: 0; }
+      .gallery-bar { padding: 1.2rem 1.5rem; }
+      .photo-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+      .lb-prev, .lb-next { display: none; }
+      #lb-img { max-width: 98vw; max-height: 80vh; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="https://zigtab.com.br" class="nav-wordmark">ZIGTAB</a>
+  <span class="nav-label">Secret Vibe · Fotos</span>
+</nav>
+
+<!-- ─── STEP 1: VERIFICAR NOME ─── -->
+<section class="step active" id="step-verify">
+  <span class="lock-tag">Acesso Exclusivo</span>
+  <h1 class="lock-title">FOTOS<br>EXCLUSIVAS</h1>
+  <p class="lock-sub">Secret Vibe · Novembro 2025</p>
+
+  <div class="search-wrap">
+    <input
+      id="name-input"
+      class="search-input"
+      type="text"
+      placeholder="Digite seu nome completo"
+      autocomplete="off"
+      spellcheck="false"
+    />
+    <button class="search-btn" id="search-btn">
+      Verificar meu nome na lista
+    </button>
+    <p class="msg-error" id="search-error"></p>
+  </div>
+
+  <p class="search-hint">
+    Só quem participou do Secret Vibe acessa as fotos.<br>
+    Digite seu nome como foi registrado na lista de convidados.
+  </p>
+</section>
+
+<!-- ─── STEP 2: CONTATO ─── -->
+<section class="step" id="step-contact">
+  <span class="found-badge">Você está na lista</span>
+  <h2 class="found-name" id="found-name-display"></h2>
+  <p class="found-desc">Deixe seu contato para liberar as fotos</p>
+
+  <div class="contact-form">
+    <div class="field">
+      <label for="phone-input">WhatsApp</label>
+      <input id="phone-input" class="contact-input" type="tel" placeholder="(69) 9 9999-9999" />
+    </div>
+    <div class="field">
+      <label for="whatsapp-input">E-mail</label>
+      <input id="whatsapp-input" class="contact-input" type="email" placeholder="seu@email.com" />
+    </div>
+    <p class="msg-error" id="contact-error"></p>
+    <button class="confirm-btn" id="confirm-btn">
+      Acessar as fotos →
+    </button>
+  </div>
+
+  <p class="contact-note">Seus dados são usados apenas pela ZIGTAB.</p>
+</section>
+
+<!-- ─── STEP 3: GALERIA ─── -->
+<section class="step" id="step-gallery">
+  <div class="gallery-bar">
+    <span class="gallery-title">SECRET VIBE</span>
+    <span class="gallery-meta" id="gallery-meta">carregando...</span>
+  </div>
+  <div class="photo-grid" id="photo-grid"></div>
+</section>
+
+
+<script>
+  // ─────────────────────────────────────────────────────────────
+  // CONFIG
+  // ─────────────────────────────────────────────────────────────
+  const SCRIPT_URL  = 'https://script.google.com/macros/s/AKfycbyMbNHRI4qjBE6qtzBf9si9KtK6HPXFyIELgpJD3XlDh1pw4d0fozlCrh-dU9hyyJYCfQ/exec';
+  const SHEET_ID    = '1EVQPC0zhMT4rcinNDQB4kC8cni0Bey2bpAIf9fRl3rw';
+  const SHEET_GID   = '1431322163';
+  const FOLDER_ID   = '1u8jn4caifgbBizTcVRn6dCTDWQpaJG1p';
+  const THRESHOLD   = 0.72;
+
+  // ─────────────────────────────────────────────────────────────
+  // STATE
+  // ─────────────────────────────────────────────────────────────
+  let guestNames  = [];   // carregado via gviz API
+  let matchedName = '';
+
+  // ─────────────────────────────────────────────────────────────
+  // CARREGAR LISTA DE NOMES (Google Sheets gviz — sem CORS)
+  // ─────────────────────────────────────────────────────────────
+  function loadGuestNames() {
+    // gviz sempre chama google.visualization.Query.setResponse — interceptamos aqui
+    window.google = window.google || {};
+    window.google.visualization = window.google.visualization || {};
+    window.google.visualization.Query = window.google.visualization.Query || {};
+    window.google.visualization.Query.setResponse = (r) => {
+      guestNames = (r.table?.rows || [])
+        .map(row => row.c?.[1]?.v)
+        .filter(v => v && String(v).trim().length > 1);
+    };
+    const s = document.createElement('script');
+    s.src = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq` +
+            `?tqx=out:json&gid=${SHEET_GID}`;
+    s.onerror = () => console.warn('gviz falhou ao carregar');
+    document.head.appendChild(s);
+  }
+  loadGuestNames();
+
+  // ─────────────────────────────────────────────────────────────
+  // NAVEGAÇÃO ENTRE STEPS
+  // ─────────────────────────────────────────────────────────────
+  function showStep(id) {
+    document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // STEP 1 — VERIFICAR NOME (client-side)
+  // ─────────────────────────────────────────────────────────────
+  const nameInput = document.getElementById('name-input');
+  const searchBtn = document.getElementById('search-btn');
+  const searchErr = document.getElementById('search-error');
+
+  searchBtn.addEventListener('click', handleVerify);
+  nameInput.addEventListener('keydown', e => { if (e.key === 'Enter') handleVerify(); });
+
+  function handleVerify() {
+    const name = nameInput.value.trim();
+    searchErr.textContent = '';
+
+    if (name.length < 3) {
+      searchErr.textContent = 'Digite pelo menos 3 caracteres.';
+      return;
+    }
+
+    setLoading(searchBtn, true, 'Verificar meu nome na lista');
+
+    // Se a lista ainda não carregou, aguarda até 6s com retry
+    if (!guestNames.length) {
+      let tries = 0;
+      const poll = setInterval(() => {
+        tries++;
+        if (guestNames.length) {
+          clearInterval(poll);
+          doVerify(name);
+        } else if (tries >= 6) {
+          clearInterval(poll);
+          setLoading(searchBtn, false, 'Verificar meu nome na lista');
+          searchErr.textContent = 'Erro ao carregar lista. Recarregue a página.';
+        }
+      }, 1000);
+      return;
+    }
+
+    doVerify(name);
+  }
+
+  function doVerify(name) {
+    setTimeout(() => {
+      let best = { name: null, score: 0 };
+      for (const guest of guestNames) {
+        const score = nameSimilarity(guest, name);
+        if (score > best.score) best = { name: guest, score };
+      }
+
+      setLoading(searchBtn, false, 'Verificar meu nome na lista');
+
+      if (best.score >= THRESHOLD) {
+        matchedName = best.name;
+        document.getElementById('found-name-display').textContent = best.name;
+        showStep('step-contact');
+      } else {
+        searchErr.textContent = 'Nome não encontrado. Verifique a grafia ou tente o nome completo.';
+      }
+    }, 300);
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // STEP 2 — SALVAR CONTATO (no-cors — funciona de qualquer origem)
+  // ─────────────────────────────────────────────────────────────
+  const confirmBtn = document.getElementById('confirm-btn');
+  const contactErr = document.getElementById('contact-error');
+
+  confirmBtn.addEventListener('click', handleSave);
+
+  function handleSave() {
+    const phone    = document.getElementById('phone-input').value.trim();
+    const whatsapp = document.getElementById('whatsapp-input').value.trim();
+    contactErr.textContent = '';
+
+    if (!phone && !whatsapp) {
+      contactErr.textContent = 'Preencha pelo menos WhatsApp ou e-mail.';
+      return;
+    }
+
+    setLoading(confirmBtn, true, 'Acessar as fotos →');
+
+    // Salva o contato em background (no-cors: não lê resposta, mas o dado chega)
+    const params = new URLSearchParams({ action: 'save', name: matchedName, phone, whatsapp });
+    fetch(`${SCRIPT_URL}?${params}`, { mode: 'no-cors' }).catch(() => {});
+
+    // Abre a galeria sem esperar resposta
+    setTimeout(() => {
+      renderGallery();
+      showStep('step-gallery');
+    }, 600);
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // STEP 3 — GALERIA (Drive folder embed)
+  // ─────────────────────────────────────────────────────────────
+  function renderGallery() {
+    const grid = document.getElementById('photo-grid');
+    grid.innerHTML = `
+      <div style="width:100%;display:flex;flex-direction:column;gap:0;">
+        <iframe
+          src="https://drive.google.com/embeddedfolderview?id=${FOLDER_ID}#grid"
+          style="width:100%;height:calc(100vh - 88px);border:none;"
+          allowfullscreen
+        ></iframe>
+      </div>
+    `;
+    document.getElementById('gallery-meta').textContent = 'fotos do evento';
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // ALGORITMO DE SIMILARIDADE (client-side, igual ao Apps Script)
+  // ─────────────────────────────────────────────────────────────
+  function normalize(str) {
+    return String(str).toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/\s+/g, ' ').trim();
+  }
+
+  function nameSimilarity(guest, input) {
+    const g = normalize(guest);
+    const q = normalize(input);
+    if (g === q) return 1.0;
+    if (g.includes(q) || q.includes(g)) return 0.95;
+    const gp = g.split(' '), qp = q.split(' ');
+    if (gp[0] === qp[0] && gp[gp.length-1] === qp[qp.length-1]) return 0.90;
+    if (gp[0] === qp[0]) return 0.76;
+    const dist = levenshtein(g, q);
+    return 1 - dist / Math.max(g.length, q.length);
+  }
+
+  function levenshtein(a, b) {
+    const m = a.length, n = b.length;
+    const dp = Array.from({length: m+1}, (_, i) => Array.from({length: n+1}, (_, j) => i||j ? (i ? (j ? 0 : i) : j) : 0));
+    for (let i = 1; i <= m; i++)
+      for (let j = 1; j <= n; j++)
+        dp[i][j] = a[i-1]===b[j-1] ? dp[i-1][j-1] : 1+Math.min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]);
+    return dp[m][n];
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  // UTILS
+  // ─────────────────────────────────────────────────────────────
+  function setLoading(btn, loading, originalText) {
+    btn.disabled = loading;
+    btn.innerHTML = loading ? '<span class="spinner"></span>' : originalText;
+  }
+</script>
+
+</body>
+</html>
